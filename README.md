@@ -1,4 +1,3 @@
-# Aniron Dashboard | Flutter App
 
 Specification :
 
