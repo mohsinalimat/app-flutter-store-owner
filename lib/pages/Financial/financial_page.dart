@@ -1,8 +1,6 @@
 import 'package:aniron/theme/colors.dart';
-// import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/appbar_top.dart';
-import 'package:line_icons/line_icons.dart';
 
 class FinancialPage extends StatefulWidget {
   @override

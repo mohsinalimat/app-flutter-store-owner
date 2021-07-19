@@ -61,7 +61,7 @@ class ProductGrandListWidget extends StatelessWidget {
                       child: Padding(
                           padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                           child: Text(
-                            'Num Product',
+                            'Products',
                             style: TextStyle(
                                 fontSize: headerTableTextSize,
                                 fontWeight: FontWeight.bold,

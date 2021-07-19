@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/colors.dart';
 import 'dart:core';
-import 'dart:async';
 
 class CustomAlertDialogWidget extends StatelessWidget {
   

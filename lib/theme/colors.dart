@@ -8,7 +8,6 @@ const online = Color(0xFF66BB6A);
 const blue_story = Colors.blueAccent;
 
 class ThemeColor {
-  // static const Color main = Color(0xff0444aa);
   static const Color main = Color(0xff3cba54);
   static const Color agent = Color(0xFFBC1F26);
   static const Color secondary = Color(0xFFd23400);
@@ -23,6 +22,11 @@ class ThemeColor {
   static const Color red = Color(0xFFed0610);
   static const Color lightgreen = Color(0xFF64af13);
   static const Color darkyellow = Color(0xFFc9d945);
+  static const Color yellow = Color(0xFFFFFF00);
+  static const Color purple = Color(0xFF6E6AD9);
+  static const Color cyan = Color(0xFF00FFFF);
+  static const Color greencyan = Color(0xFF43CBD0);
+  
 
   static const Color none = Color(0x00000000);
   static const Color transparent = Color(0x33FFFFFF);

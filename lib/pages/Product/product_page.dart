@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aniron/theme/colors.dart';
+import '../../theme/colors.dart';
 import 'product_grand_page.dart';
 import 'product_list_page.dart';
 
@@ -23,7 +24,7 @@ class _ProductState extends State<Product> {
         appBar: AppBar(
             centerTitle: true,
             title: Text(
-              'Product Management',
+              'Products',
               style: TextStyle(color: ThemeColor.dark),
             ),
             // backgroundColor: ThemeColor.light,
@@ -71,7 +72,7 @@ class _ProductState extends State<Product> {
             ]),
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.only(left: 10, right: 10, top: 20, bottom: 15),
+            padding: EdgeInsets.only(left: 10, right: 10, top: 30, bottom: 15),
             width: MediaQuery.of(context).size.width,
             child: Column(
               children: <Widget>[
@@ -152,7 +153,7 @@ class _ProductState extends State<Product> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
+            child: Icon(Icons.add, color: white,),
             onPressed: () {
               Navigator.pushNamed(context, '/add-product');
             }));

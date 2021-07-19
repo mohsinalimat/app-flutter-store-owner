@@ -4,7 +4,6 @@ import 'dart:ui';
 import 'package:arrow_path/arrow_path.dart';
 import 'package:flutter/material.dart';
 import '../theme/colors.dart';
-import 'package:flutter/services.dart';
 class ArrowPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {

@@ -87,7 +87,7 @@ class _OrderPageState extends State<OrderPage> {
                         title: Container(
                           margin: EdgeInsets.only(right: 50),
                           child: Center(
-                            child: Text('FIlter Order',
+                            child: Text('FIlter',
                                 style: TextStyle(fontSize: 18)),
                           ),
                         ),
@@ -360,7 +360,7 @@ class _OrderPageState extends State<OrderPage> {
         appBar: AppbarTopWidget(
           twoActionButtons: true,
           
-          appBarTitle: 'Order Management',
+          appBarTitle: 'Orders',
           showBackButton: false,
           endDrawerIcon: Icon(LineIcons.filter),
           enableEndDrawer: true,
@@ -369,7 +369,8 @@ class _OrderPageState extends State<OrderPage> {
 
           },
         ),
-        floatingActionButton: OrderFloatingmenuWidget());
+        // floatingActionButton: OrderFloatingmenuWidget()
+      );
   }
 }
 
@@ -379,7 +380,6 @@ class AllOrderPage extends StatefulWidget {
 }
 
 class _AllOrderPageState extends State<AllOrderPage> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -393,18 +393,18 @@ class _AllOrderPageState extends State<AllOrderPage> {
         SizedBox(
           height: 10,
         ),
-        Text(
-          "Grand Total:",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
-        SizedBox(
-          height: 7,
-        ),
+        // Text(
+        //   "Grand Total:",
+        //   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        // ),
+        // SizedBox(
+        //   height: 7,
+        // ),
         RichText(
             text: TextSpan(
           style: TextStyle(color: ThemeColor.dark),
           children: <TextSpan>[
-            TextSpan(text: 'Today: ', style: TextStyle(color: ThemeColor.main)),
+            TextSpan(text: 'Today: ', style: TextStyle(color: Colors.grey)),
             TextSpan(text: '10-10-2020'),
           ],
         )),
@@ -439,22 +439,22 @@ class _AllOrderPageState extends State<AllOrderPage> {
         tableHeader(),
         tableRow(() {
           Navigator.pushNamed(context, '/order-section');
-        }, LineIcons.cart_plus, "New", 12, ThemeColor.red, 2000),
+        }, LineIcons.cart_plus, "New", 12, ThemeColor.orange, 2000),
         tableRow(() {
           Navigator.pushNamed(context, '/order-section');
-        }, LineIcons.paperclip, "Accepted ", 12, ThemeColor.lightblue, 2000),
+        }, LineIcons.get_pocket, "Accepted ", 12, ThemeColor.lightblue, 2000),
         tableRow(() {
           Navigator.pushNamed(context, '/order-section');
-        }, LineIcons.cube, "Packaged", 12, ThemeColor.orange, 2000),
+        }, LineIcons.cube, "Packaged", 12, ThemeColor.purple, 2000),
         tableRow(() {
           Navigator.pushNamed(context, '/order-section');
-        }, LineIcons.truck, "Delivery", 12, ThemeColor.lightgreen, 2000),
+        }, LineIcons.truck, "Delivery", 12, ThemeColor.greencyan, 2000),
         tableRow(() {
           Navigator.pushNamed(context, '/order-section');
-        }, LineIcons.truck, "Completed", 12, ThemeColor.red, 2000),
+        }, LineIcons.archive, "Completed", 12, ThemeColor.main, 2000),
         tableRow(() {
           Navigator.pushNamed(context, '/order-section');
-        }, LineIcons.truck, "Revert", 12, grey, 2000),
+        }, LineIcons.close, "Rejected", 12, ThemeColor.red, 2000),
         tableRowTotal(200, 8000)
       ],
     );

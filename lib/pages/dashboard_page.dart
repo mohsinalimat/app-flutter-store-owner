@@ -1,7 +1,7 @@
 import 'package:aniron/theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 
+import '../theme/colors.dart';
 import 'home_page.dart';
 import 'Product/product_page.dart';
 import 'Chat/chat_page.dart';
@@ -29,7 +29,7 @@ class _DashboardPageState extends State<DashboardPage> {
         backgroundColor: Colors.white,
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.white,
-          unselectedItemColor: ThemeColor.main,
+          unselectedItemColor: Colors.grey,
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -39,7 +39,7 @@ class _DashboardPageState extends State<DashboardPage> {
               ),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.store),
+              icon: Icon(Icons.card_giftcard),
               title: Text('Product'),
             ),
             BottomNavigationBarItem(
@@ -58,7 +58,7 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
           ],
           currentIndex: widget._selectedIndex,
-          selectedItemColor: ThemeColor.orange,
+          selectedItemColor: primary,
           onTap: (e) {
             widget._selectedIndex = e;
             setState(() {});

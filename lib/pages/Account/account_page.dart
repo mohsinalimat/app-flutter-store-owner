@@ -4,6 +4,7 @@ import 'package:aniron/widgets/item_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../theme/colors.dart';
 import '../../util/data.dart';
 
 class AccountPage extends StatefulWidget {
@@ -23,11 +24,10 @@ class _AccountPageState extends State<AccountPage> {
             ),
       ),
       body: body(),
-      
     );
   }
+
   Widget body(){
-  
     return ListView(
       children: <Widget>[
         Container(
@@ -49,8 +49,8 @@ class _AccountPageState extends State<AccountPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: 130,
-                height: 130,
+                width: 100,
+                height: 100,
                 decoration: BoxDecoration(
                   border: Border.all(
                       width: 4,
@@ -72,30 +72,24 @@ class _AccountPageState extends State<AccountPage> {
                       fontWeight: FontWeight.w500
                     ),),
                   ),
-                  
                   SizedBox(height: 8,),
                   Text("+855 96 4444 204",style: TextStyle(
                     fontSize: 15,
-                    color: Colors.black54
+                    color: Colors.grey
                   ),),
                   SizedBox(height: 8,),
                   Text("ID: 100001",style: TextStyle(
                     fontSize: 15,
-                    color: ThemeColor.main,
+                    color: primary,
                     fontWeight: FontWeight.w500
                   ),),
-                  SizedBox(height: 8,),
-                  FlatButton(
-                    color: ThemeColor.main,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                    onPressed: (){
-
-                  }, child: Text("Edit Profile",style: TextStyle(
-                    color: white,
-                    fontSize: 13
-                  ),))
                 ],
-              )
+              ),
+              SizedBox(width: 20,),
+              Container(
+                child: Icon(Icons.arrow_forward_ios, color: Colors.grey,)
+              ),
+              SizedBox(width: 5,),
             ],
           ),
         ),
@@ -122,17 +116,14 @@ class _AccountPageState extends State<AccountPage> {
           child: Column(
             children: <Widget>[
               ItemTileWidget(
-                icon: Icons.home, color: ThemeColor.secondary ,
-                title: "Manage Store",cnt: "7",),
+                icon: Icons.store, color: primary ,
+                title: "Manage Store",),
               ItemTileWidget(
-                icon: Icons.search, color: ThemeColor.lightgreen ,
-                title: "Feedback",cnt: "6",),
-              ItemTileWidget(
-                icon: Icons.question_answer, color: ThemeColor.orange ,
-                title: "How to use app",cnt: "",),
-              ItemTileWidget(
-                icon: Icons.settings, color: ThemeColor.main ,
+                icon: Icons.settings, color: primary ,
                 title: "Setting",cnt: "",),
+              ItemTileWidget(
+                icon: Icons.notifications, color: primary ,
+                title: "Notifications",cnt: "",),
 
             ],
           ),
@@ -160,17 +151,14 @@ class _AccountPageState extends State<AccountPage> {
           child: Column(
             children: <Widget>[
               ItemTileWidget(
-                icon: Icons.notifications, color: ThemeColor.red ,
-                title: "Notifications and Sounds",cnt: "",),
+                icon: Icons.call, color: primary ,
+                title: "Contact",cnt: "",),
               ItemTileWidget(
-                icon: Icons.lock, color: Colors.black54 ,
-                title: "Privacy and Security",cnt: "",),
+                icon: Icons.lock, color: primary ,
+                title: "Privacy Policy",cnt: "",),
               ItemTileWidget(
-                icon: Icons.comment, color: ThemeColor.lightblue ,
+                icon: Icons.list, color: primary ,
                 title: "Term and Condition",cnt: "",),
-              ItemTileWidget(
-                icon: Icons.help, color: ThemeColor.lightgreen ,
-                title: "Help Center",cnt: "",),
             ],
           ),
         ),
@@ -197,8 +185,14 @@ class _AccountPageState extends State<AccountPage> {
           child: Column(
             children: <Widget>[
               ItemTileWidget(
-                icon: Icons.exit_to_app, color: ThemeColor.red ,
-                title: "Log out",cnt: "",),
+                icon: Icons.exit_to_app, color: ThemeColor.red,
+                title: "Log out",cnt: "",
+                press: (){
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          '/login', (Route<dynamic> route) => false,
+                          arguments: 0);
+                    },
+              ),
        
             ],
           ),

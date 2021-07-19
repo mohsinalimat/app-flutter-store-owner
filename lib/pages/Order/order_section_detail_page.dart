@@ -18,7 +18,7 @@ class _OrderSectionDetailPageState extends State<OrderSectionDetailPage> {
         ),
         bottomNavigationBar: BottomSubmitButtonWidget(
            buttonWidth:  (MediaQuery.of(context).size.width / 2) - 60,
-          firstButtonTitle: 'REVERT',
+          firstButtonTitle: 'REJECT',
           secondButtonTitle: 'ACCEPT',
           firstButtonBackgroundColor: ThemeColor.orange,
         ),

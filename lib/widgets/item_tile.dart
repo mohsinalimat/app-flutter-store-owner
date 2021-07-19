@@ -7,6 +7,7 @@ class ItemTileWidget extends StatelessWidget {
   final IconData icon;
   final Color color;
   final String cnt;
+  final Function press;
 
 
   ItemTileWidget(
@@ -14,7 +15,7 @@ class ItemTileWidget extends StatelessWidget {
       this.title = '',
       this.icon = LineIcons.calendar,
       this.cnt = '',
-      this.color = Colors.red})
+      this.color = Colors.red, this.press})
       : super(key: key);
 
   @override
@@ -22,17 +23,14 @@ class ItemTileWidget extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
+          padding: EdgeInsets.only(left: 10, right: 10),
           decoration: BoxDecoration(
               border: Border(
                   bottom: BorderSide(color: ThemeColor.grayline, width: 1))),
           child: ListTile(
-            contentPadding: EdgeInsets.only(left: 2.0),
             title: Row(
               children: <Widget>[
-                
-                Padding(
-                  padding: EdgeInsets.only(left:10,right:5),
-                  child: Container(
+                Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
@@ -43,8 +41,7 @@ class ItemTileWidget extends StatelessWidget {
                       size: 20,
                       color: white,
                     ),
-                  )
-                ),
+                  ),
                 
                 SizedBox(
                   width: 10,
@@ -77,15 +74,13 @@ class ItemTileWidget extends StatelessWidget {
                     
               ],
             ),
-            trailing: Padding(
-              padding: EdgeInsets.only(right:10),
-              child: Icon(
+            trailing:
+              Icon(
                 Icons.arrow_forward_ios,
                 size: 18,
+                color: Colors.grey,
               ),
-            ),
-            onTap: () {
-            },
+            onTap: press
           ),
         ),
         Positioned.fill(
@@ -93,7 +88,7 @@ class ItemTileWidget extends StatelessWidget {
           alignment: Alignment.bottomLeft,
           child: Container(
             height: 0,
-            width: 60,
+            width: 10,
             decoration: BoxDecoration(
                 border:
                     Border(bottom: BorderSide(color: Colors.white, width: 2))),
