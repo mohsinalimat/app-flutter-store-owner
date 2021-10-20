@@ -1,4 +1,4 @@
-**To access the source code, please request for access.**
+# Store Owner
 
 - [My Linkedin](https://www.linkedin.com/in/sangvaleap-vanny-353b25aa/)
 - [My Upwork](https://www.upwork.com/freelancers/~01482fe63544bbcb48)
